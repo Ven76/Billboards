@@ -1,0 +1,10 @@
+<h1>BillBoard Status</h1>
+
+<ul>
+  <li> <%= @billboard.song %> </li>
+  <li> <%= @billboard.artist %> </li>
+  <li> <%= @billboard.album %> </li>
+  <li> <%= link_to 'Edit', edit_bill_board_path(@billboard) %>
+   <%= link_to 'Delete', bill_board_path(@billboard), method: :delete %> </li>
+</ul>
+<%= link_to "Billboard", bill_boards_path %>

@@ -1,0 +1,21 @@
+<%= link_to 'New Entry', new_bill_board_path %>
+<h1>The Billboard </h1>
+<table>
+  <thead>
+
+  </thead>
+  <tbody>
+    <% if @billboards.any? %>
+    <% end %>
+    <% @billboards.each do |billboard| %>
+
+    <tr>
+      <td> <%= billboard.song %> </td>
+      <td> <%= billboard.artist %> </td>
+      <td> <%= billboard.album %> </td>
+      <td> <%= link_to 'Show', bill_board_path(billboard) %> </td>
+      <td> <%= link_to 'artists', bill_board_artists_path(billboard) %> </td>
+    </tr>
+        <% end %>
+  </tbody>
+</table>

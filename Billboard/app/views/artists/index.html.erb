@@ -1,0 +1,22 @@
+<%= link_to 'New Entry', new_bill_board_artist_path %>
+<h1>The Artists </h1>
+<table>
+  <thead>
+
+  </thead>
+  <tbody>
+    <% if @artists.any? %>
+    <% end %>
+    <% @artists.each do |artist| %>
+  <tr>
+    <tr>
+      <td> <%= artist.name %> </td>
+      <td> <%= artist.song %> </td>
+      <td> <%= artist.album %> </td>
+      <td> <%= artist.genre %> </td>
+      <td> <%= link_to 'Show', bill_board_artist_path(@billboard, artist) %> </td>
+
+    </tr>
+        <% end %>
+  </tbody>
+</table>

@@ -1,0 +1,11 @@
+<h1><%= @artist %></h1>
+
+<ul>
+  <li> <%= @artist.name %> </li>
+  <li> <%= @artist.song %> </li>
+  <li> <%= @artist.album %> </li>
+  <li> <%= @artist.genre %> </li>
+  <li> <%= link_to 'Edit', edit_bill_board_artist_path(@artist) %>
+   <%= link_to 'Delete', bill_board_path(@artist), method: :delete %> </li>
+</ul>
+<%= link_to "Artists", bill_board_artists_path %>
